@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Dashboard Covid</title>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        jQuery(window).load(function ($) {
+            atualizaRelogio();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="top">
+        <div class="relogio">
+            <a class="navbar-brand" href="#">
+                <img src="/img/logo.png" width="249" height="76" alt="">
+            </a>
+        </div>
+        <div class="relogio">
+            <output id="data" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>
+        </div>
+        <div class="relogio">
+            <output id="hora" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>
+        </div>
+    </div>
+    <br>
+    <div class="centro">
+        <div class="containerOne">
+            <p>País</p>
+        </div>
+        <div class="containerTwo">
+            <p>Cód. País</p>
+        </div>
+        <div class="containerThree">
+            <p>Nº de Casos</p>
+        </div>
+        <div class="containerFour">
+            <p>Última Atualização</p>
+        </div>
+    </div>
+    <div class="meio">
+        <div class="meioOne">
+            <div class="meioParagrafo">
+                <p>Insira abaixo o nome da Cidade a ser consultada: </p>
+            </div>
+            <br>
+            <div>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+        <div class="meioTwo">
+            <div class="meioParagrafo">
+                <p>Dados Gerais de: </p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+<script>
+    function atualizaRelogio() {
+        var momentoAtual = new Date();
+
+        var vhora = momentoAtual.getHours();
+        var vminuto = momentoAtual.getMinutes();
+        var vsegundo = momentoAtual.getSeconds();
+
+        var vdia = momentoAtual.getDate();
+        var vmes = momentoAtual.getMonth() + 1;
+        var vano = momentoAtual.getFullYear();
+
+        if (vdia < 10) { vdia = "0" + vdia; }
+        if (vmes < 10) { vmes = "0" + vmes; }
+        if (vhora < 10) { vhora = "0" + vhora; }
+        if (vminuto < 10) { vminuto = "0" + vminuto; }
+        if (vsegundo < 10) { vsegundo = "0" + vsegundo; }
+
+        dataFormat = vdia + " / " + vmes + " / " + vano;
+        horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+
+        document.getElementById("data").innerHTML = dataFormat;
+        document.getElementById("hora").innerHTML = horaFormat;
+
+        setTimeout("atualizaRelogio()", 1000);
+    }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+    integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+    crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,104 @@
+body{
+    background-color:black;
+    border: 0px;
+    margin: 0px;
+}
+.main {
+ display: flex;
+ background-color: black; 
+ 
+ align-items: center;
+ border: 0;
+ margin: 0;
+ justify-content: center;
+}
+
+.top{
+    display: flex;
+    background-color:#343a40;
+    border-radius: 5px;
+    border: 100px;
+    margin:10px;
+    justify-content:space-between;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.relogio{
+ display: flex;
+ width: auto;
+ color:white;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: 30px;
+ padding: 1%;
+}
+
+.centro{
+ display: flex;
+ width: auto;
+ height:auto;
+ background-color:#343a40;
+ justify-content: space-around;
+ align-items: flex-start;
+ border-radius: 5px;
+ margin:10px;
+ padding:10px;
+}
+
+.containerOne{
+    display: flex;
+    background-color:black;
+    border-radius: 10px;
+}
+.containerTwo{
+    display: flex;
+    background-color: black;
+    border-radius: 10px;
+}
+.containerThree{
+    display: flex;
+    background-color: black;
+    border-radius: 10px;
+}
+.containerFour{
+    display: flex;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.meio{
+    display: flex;
+    width: auto;
+    height:300px;
+    background-color:#343a40;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    margin:10px;
+    padding: 10px;
+}
+.meioOne{
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    width: 45%;
+    height: 90%;
+    background-color: black;
+    border-radius: 10px;
+}
+.meioParagrafo p{
+    font-style: italic;
+    font-size: 25px;
+    color: white;
+}
+.meioTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    width: 45%;
+    height: 90%;
+    background-color: black;
+    border-radius: 10px;
+}
