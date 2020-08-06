@@ -44,26 +44,39 @@ body{
  margin:10px;
  padding:10px;
 }
+.topParagrafo{
+    align-items: center;
+    color: white;
+}
+
 
 .containerOne{
     display: flex;
+    align-items: center;
     background-color:black;
     border-radius: 10px;
+    padding: 10px;
 }
 .containerTwo{
     display: flex;
+    align-items: center;
     background-color: black;
     border-radius: 10px;
+    padding: 10px;
 }
 .containerThree{
     display: flex;
+    align-items: center;
     background-color: black;
     border-radius: 10px;
+    padding: 10px;
 }
 .containerFour{
     display: flex;
+    align-items: center;
     background-color: black;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .meio{
